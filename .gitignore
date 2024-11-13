@@ -6,6 +6,10 @@
 .pnp.js
 
 .env
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4e093999a2e02dcf42ce7eb02be94e6690302fe2
 # testing
 /coverage
 
