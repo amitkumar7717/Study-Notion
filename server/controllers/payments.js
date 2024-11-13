@@ -103,10 +103,10 @@ exports.sendPaymentSuccessEmail = async (req, res) => {
         paymentId
       )
     );
-    res.status(200).json({ success: true, message: "Payment success email sent" });
+    return res.status(200).json({ success: true, message: "Payment success email sent" });
   } catch (error) {
     console.log("Error sending payment success email:", error);
-    res.status(500).json({ success: false, message: "Could not send email" });
+    return res.status(500).json({ success: false, message: "Could not send email" });
   }
 };
 
@@ -152,9 +152,9 @@ const enrollStudents = async (courses, userId, res) => {
 
       console.log(`Email sent successfully to ${enrolledStudent.email}`);
     }
-    res.status(200).json({ success: true, message: "All students enrolled and notified" });
+  //  return res.status(200).json({ success: true, message: "All students enrolled and notified" });
   } catch (error) {
     console.log("Error enrolling student:", error);
-    res.status(500).json({ success: false, error: "Error enrolling student" });
+    return res.status(500).json({ success: false, error: "Error enrolling student" });
   }
 };
